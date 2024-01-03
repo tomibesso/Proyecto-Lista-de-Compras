@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Compras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Lista de Tareas</title>
 </head>
 <body>
-    
+    <header>
+        <h1>¡Bienvenido/s a la "Lista de Tareas" de Tomas Besso!</h1>
+        <h2>Welcome to de "To Do List" of Tomas Besso!</h2>
+    </header>
+    <main class="list roundBorder">
+        <div class="date">
+            <div class="date_Left">
+                <div id="dateNumber"></div>
+                <div>
+                    <div id="dateMonth"></div>
+                    <div id="dateYear"></div>
+                </div>
+            </div>
+            <div id="dateText"></div>
+        </div>
+        <form onsubmit="addNewTask(event)">
+            <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="roundBorder">
+            <button type="submit" class="addTaskButton">+</button>
+            <button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">Ordenar</button>
+        </form>
+        <div id="tasksContainer"></div>
+    </main>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

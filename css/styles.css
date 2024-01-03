@@ -1,0 +1,113 @@
+*::first-letter {
+  text-transform: capitalize;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  height: 100vh;
+  background: url(../assets/planner-plan-planning-to-do-to-do-list-august.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  background-color: rgba(42, 80, 73, 0.832);
+  height: 100px;
+}
+header h1, header h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 5px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  min-height: 150px;
+  margin: 45px auto;
+  background-color: rgb(15, 58, 55);
+}
+
+.roundBorder {
+  border-radius: 5px;
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.date_Left {
+  display: flex;
+  align-items: center;
+}
+.date_Left #dateNumber {
+  font-size: 3em;
+  margin-left: 10px;
+}
+.date_Left #dateMonth, .date_Left #dateYear {
+  margin-left: 5px;
+}
+.date #dateText {
+  margin-right: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.date #dateMonth, .date #dateNumber, .date #dateYear, .date #dateText {
+  font-weight: bold;
+}
+
+form {
+  margin: 0 20px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 35px auto;
+  grid-column-gap: 15px;
+}
+form input {
+  border: none;
+  padding-left: 10px;
+  background-color: #146d4a;
+  height: 35px;
+  color: rgb(0, 0, 0);
+}
+form input:focus {
+  outline: none;
+}
+form input::placeholder {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: start;
+}
+form .addTaskButton, form .orderButton {
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  background-color: #146d4a;
+}
+form .addTaskButton {
+  border-radius: 50%;
+  height: 35px;
+}
+form .orderButton {
+  background-color: rgb(18, 174, 166);
+}
+
+.task {
+  background-color: rgb(67, 165, 144);
+  padding: 15px;
+  margin: 15px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.done {
+  text-decoration: line-through;
+  background-color: rgba(38, 141, 118, 0.31);
+}
+
+/*# sourceMappingURL=styles.css.map */
