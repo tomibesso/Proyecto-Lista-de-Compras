@@ -1,25 +1,16 @@
-*::first-letter {
-  text-transform: capitalize;
-}
-
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
+  width: 100vw;
   height: 100vh;
   background: url(../assets/planner-plan-planning-to-do-to-do-list-august.jpg);
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
-header {
-  background-color: rgba(42, 80, 73, 0.832);
-  height: 100px;
-}
-header h1, header h2 {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 5px;
+*::first-letter {
+  text-transform: capitalize;
 }
 
 .list {
@@ -29,6 +20,10 @@ header h1, header h2 {
   min-height: 150px;
   margin: 45px auto;
   background-color: rgb(15, 58, 55);
+}
+
+main {
+  position: relative;
 }
 
 .roundBorder {
@@ -44,6 +39,7 @@ header h1, header h2 {
 .date_Left {
   display: flex;
   align-items: center;
+  color: black;
 }
 .date_Left #dateNumber {
   font-size: 3em;
@@ -59,6 +55,7 @@ header h1, header h2 {
 }
 .date #dateMonth, .date #dateNumber, .date #dateYear, .date #dateText {
   font-weight: bold;
+  color: black;
 }
 
 form {
@@ -108,6 +105,100 @@ form .orderButton {
 .done {
   text-decoration: line-through;
   background-color: rgba(38, 141, 118, 0.31);
+}
+
+header {
+  background-color: rgba(42, 80, 73, 0.832);
+  height: 110px;
+  width: 100vw;
+}
+header h1, header h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 5px;
+  color: black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  top: 250px;
+  padding-bottom: 20px;
+}
+footer .divRedes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.9019607843);
+  border-radius: 10px;
+}
+footer .divRedes a {
+  font-size: 25px;
+  color: white;
+}
+
+@media only screen and (min-width: 767px) {
+  footer .divRedes {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  header {
+    height: 80px;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+  footer .divRedes {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  header {
+    width: 100vw;
+    height: 50px;
+  }
+  header h1 {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  header h2 {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  main {
+    width: 90vw;
+    margin: auto;
+  }
+  main .list {
+    width: 100%;
+    margin-top: 45px;
+  }
+  main form input {
+    width: 100%;
+  }
+  main form input::placeholder {
+    font-size: smaller;
+  }
+  main form .orderButton {
+    font-size: smaller;
+  }
+  footer .divRedes {
+    width: 60%;
+    height: 35px;
+  }
+  footer .divRedes a {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

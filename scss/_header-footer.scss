@@ -1,0 +1,33 @@
+header {
+    background-color: rgba(42, 80, 73, 0.832);
+    height: 110px;
+    width: 100vw;
+    
+    h1, h2 {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 5px;
+        color: black;
+    }
+}
+
+footer {
+    @include dflex-center-center;
+    width: 100%;
+    position: relative;
+    top: 250px;
+    padding-bottom: 20px;
+
+    .divRedes {
+        @include dflex-space-cen;
+        @include w-h(30%, 50px);
+        background-color: #000000e6;
+        border-radius: 10px;
+    
+        a {
+            font-size: 25px;
+            color: white;
+        }
+    }
+}

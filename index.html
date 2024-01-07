@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
     <title>Lista de Tareas</title>
 </head>
@@ -12,25 +17,39 @@
         <h1>¡Bienvenido/s a la "Lista de Tareas" de Tomas Besso!</h1>
         <h2>Welcome to de "To Do List" of Tomas Besso!</h2>
     </header>
-    <main class="list roundBorder">
-        <div class="date">
-            <div class="date_Left">
-                <div id="dateNumber"></div>
-                <div>
-                    <div id="dateMonth"></div>
-                    <div id="dateYear"></div>
+    <main>
+        <div class="list roundBorder">
+            <div class="date">
+                <div class="date_Left">
+                    <div id="dateNumber"></div>
+                    <div>
+                        <div id="dateMonth"></div>
+                        <div id="dateYear"></div>
+                    </div>
                 </div>
+                <div id="dateText"></div>
             </div>
-            <div id="dateText"></div>
+            <form onsubmit="addNewTask(event)">
+                <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="roundBorder">
+                <button type="submit" class="addTaskButton">+</button>
+                <button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">Ordenar</button>
+            </form>
+            <div id="tasksContainer"></div>
         </div>
-        <form onsubmit="addNewTask(event)">
-            <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="roundBorder">
-            <button type="submit" class="addTaskButton">+</button>
-            <button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">Ordenar</button>
-        </form>
-        <div id="tasksContainer"></div>
     </main>
+    <footer>
+        <div class="divRedes">
+            <a href="https://www.facebook.com/tomi.besso/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/tomibesso/?hl=es-la" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com/tomibessoo" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://ar.linkedin.com/in/tomas-besso-87728b161" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:tomi.besso12@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+    </footer>
 
+        <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <!-- JS -->
     <script src="./js/main.js"></script>
 </body>
 </html>
